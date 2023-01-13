@@ -2,7 +2,6 @@ const express = require("express");
 const multer = require("multer");
 const AWS = require("aws-sdk");
 const app = express(); // 產生Express Application 物件
-// 建立一個不易產生衝突的 port 用來測試
 const port = 5000;
 
 app.use(express.static("static"))
@@ -91,7 +90,6 @@ app.get("/imagenew", async(req, res) => {
     })
   }
 })
-
 
 app.listen(port, () => {
   console.log("伺服器已經啟動在 http://localhost:5000/");
