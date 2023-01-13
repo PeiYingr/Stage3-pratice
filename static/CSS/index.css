@@ -1,0 +1,109 @@
+body{
+    margin:0;
+    padding:0;
+}
+.title{
+    font-size: 28px;
+    margin: 30px;
+    position: relative;
+    z-index: 1;
+}
+.contentText{
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.contentInput,.fileUploader{
+    margin-left: 10px;
+}
+.imageFileText{
+    display:flex;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.chooseFile{
+    margin-left: 10px;
+}
+.send{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.messageContent{
+    margin: 10px 0px 20px 30px;
+}
+.uploadImage{
+    width: 250px;
+    height: 200px;
+    margin: 0px 0px 20px 30px;
+}
+.uploadImage img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 5px;
+}
+.preview{
+    width: 250px;
+    height: 200px;
+    margin: 0px 0px 20px 30px;
+    display:none;
+}
+#previewImage{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 5px;
+}
+.messageFrame{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.messageBlock{
+    height: 100%;
+    width: 100%;
+}
+.noticeWindow{
+    display: none;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.25);
+    position: fixed;
+    z-index: 5;
+    top:0;
+}
+.noticeSection{
+    width: 340px;
+    height:auto;
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 60px #AAAAAA;
+    border-radius: 6px;
+    position:relative;
+    top:80px;
+}
+.decoratorBar{
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(270deg, #337788 0%, #66AABB 100%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom:15px;
+}   
+.closeIcon{
+    background-image: url("/Images/icon_close.png");
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top:27px;
+    right:17px;
+    cursor: pointer;
+}
+.noticeMain{
+    width: 310px;
+    height:100px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height:100px;
+    text-align: center;
+    color: #666666;
+    margin:auto;
+}
