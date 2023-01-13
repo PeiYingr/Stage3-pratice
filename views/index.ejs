@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="noticeWindow">        
+        <div class="noticeSection">
+            <div class="decoratorBar"></div>
+            <div class="closeIcon"></div>
+            <div class="noticeMain"></div>
+        </div>
+    </div>
+    <div class="title">發表一篇圖文</div>
+    <div class="contentText">文字內容<input type="text" name="contentInput" class="contentInput" placeholder=" 一定要留言哦 !" autocomplete="off"/></div>
+    <form id="form" enctype="multipart/form-data">
+        <div class="imageFileText">圖片檔案<input type="file" class="fileUploader" placeholder="Choose File" accept="image/*"/></div>
+        <div class="preview"><img id="previewImage"/></div>
+        <button class="send" type="button">送出</button>
+    </form>
+    <div class="messageFrame">
+        <hr class="firstHr">
+    </div>
+    <script src="/JS/index.js"></script>
+</body>
+</html>
