@@ -36,9 +36,14 @@ app.post("/imageupload", upload.single("image"), async(req, res) => {
     // 取得上傳的文字
     const messageText = req.body.messageText;
     if (messageText == ""){
-      res.status(400).json({ 			
+      res.status(400).json({ 
         "error": true,
         "message": "留言處不能為空" 
+      });
+    }else if(image == null){
+      res.status(400).json({ 			
+        "error": true,
+        "message": "未選擇圖片檔案" 
       });
     }else{
       // 設定 S3 物件的參數
