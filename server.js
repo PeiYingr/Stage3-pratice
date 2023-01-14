@@ -1,6 +1,8 @@
 const express = require("express");
 const multer = require("multer");
 const AWS = require("aws-sdk");
+// Create a token generator with the default settings:
+const randtoken = require("rand-token");
 const app = express(); // 產生Express Application 物件
 const port = 5000;
 
@@ -46,10 +48,12 @@ app.post("/imageupload", upload.single("image"), async(req, res) => {
         "message": "未選擇圖片檔案" 
       });
     }else{
+      // Generate a 32 character alpha-numeric token:
+      const token = randtoken.generate(32);
       // 設定 S3 物件的參數
       const params = {
         Bucket: "peiprojectbucket",
-        Key: "uploadImage/"+image.originalname,  // S3資料夾名稱 + 檔案名稱
+        Key: "uploadImage/" + token,  // S3資料夾名稱 + 檔案名稱
         Body: image.buffer,       // 檔案內容
         ContentType: image.mimetype,  // 檔案類型
       };
